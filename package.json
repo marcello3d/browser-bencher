@@ -1,0 +1,47 @@
+{
+    "name":"browser-bencher",
+    "version":"0.1.0",
+    "description":"Using testling to determine browser features",
+
+    "scripts":{
+        "test":"./node_modules/.bin/mocha"
+    },
+    "repository":{
+        "type":"git",
+        "url":"git://github.com/marcello3d/browser-bencher.git"
+    },
+    "keywords":[
+        "testling",
+        "browser",
+        "support",
+        "browserspec"
+    ],
+    "devDependencies":{
+        "mocha":"1.8.1",
+        "es5-compat-table":"git://github.com/kangax/es5-compat-table.git#0d1c7f281f"
+    },
+
+    "author":"Marcello Bastea-Forte",
+    "license":"zlib",
+    "testling":{
+        "files":"test/browser-*.js",
+        "browsers": [
+            "iexplore/6.0", "iexplore/7.0", "iexplore/8.0", "iexplore/10.0", "iexplore/9.0", 
+            
+            "chrome/4.0", "chrome/5.0", "chrome/6.0", "chrome/7.0", "chrome/8.0", "chrome/9.0", "chrome/10.0", 
+            "chrome/11.0", "chrome/12.0", "chrome/13.0", "chrome/14.0", "chrome/15.0", "chrome/16.0", "chrome/17.0", 
+            "chrome/18.0", "chrome/19.0", "chrome/20.0", "chrome/21.0", "chrome/22.0", "chrome/23.0", 
+            
+            "firefox/3.0", "firefox/3.5", "firefox/3.6", "firefox/4.0", "firefox/5.0", "firefox/6.0", "firefox/7.0", 
+            "firefox/8.0", "firefox/9.0", "firefox/10.0", "firefox/11.0", "firefox/12.0", "firefox/13.0", 
+            "firefox/14.0", "firefox/15.0", "firefox/16.0", "firefox/17.0", 
+            
+            "opera/10.0", "opera/10.5", "opera/11.0", "opera/11.5", "opera/11.6", "opera/12.0", 
+            
+            "safari/5.0.5", "safari/5.1", "safari/6.0", 
+            
+            "iphone/6.0", "ipad/6.0"
+        ],
+        "harness":"mocha-qunit"
+    }
+}
