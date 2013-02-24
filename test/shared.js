@@ -1,12 +1,13 @@
 var assert = require('assert')
 
 module.exports = function(database, test) {
-    database.tests.forEach(function (description) {
-        var fn = description.exec
+    for (var i=0; i<database.tests.length; i++) {
+        var testSpec = database.tests[i]
+        var fn = testSpec.exec
         if (typeof fn === "function") {
-            test(description.name.replace(/^<a href="(.+)">(.+)<\/a>$/, "$2 - $1"), function() {
-                assert.ok(fn(), "failed: "+fn.toString())
+            test(testSpec.name.replace(/^<a href="(.+)">(.+)<\/a>$/, "$2 - $1"), function() {
+                throw "failed: "+fn.toString().replace(/\n/g, ' ')
             })
         }
-    })
+    }
 }
