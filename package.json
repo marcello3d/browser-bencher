@@ -24,7 +24,7 @@
     "author":"Marcello Bastea-Forte",
     "license":"zlib",
     "testling":{
-        "files":"test/browser-*.js",
+        "files":"test/*.js",
         "browsers": [
             "iexplore/6.0", "iexplore/7.0", "iexplore/8.0", "iexplore/10.0", "iexplore/9.0", 
             
