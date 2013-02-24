@@ -6,7 +6,7 @@ module.exports = function(database, test) {
         var fn = testSpec.exec
         if (typeof fn === "function") {
             test(testSpec.name.replace(/^<a href="(.+)">(.+)<\/a>$/, "$2 - $1"), function() {
-                throw "failed: "+fn.toString().replace(/\n/g, ' ')
+                assert.ok(description.exec(), fn.toString().replace(/\n/g, ' '))
             })
         }
     }
